@@ -1,19 +1,24 @@
-version: 0.1
+version: 0.2
+
+env:
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
 
 phases:
-	install:
-		commands:
-			- echo Nothing to do in the install phase...
-	pre_build:
-		commands:
-			- echo Nothing to do in the pre_build phase...
-	build:
-		commands:
-			- echo Build started on `date`
-			- ant
-	post_build:
-		commands:
-			- echo Build completed on `date`
+  install:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - ant
+  post_build:
+    commands:
+      - echo Build completed on `date`
 artifacts:
-	files:
-		- dist/AntExample.war
+  files:
+    - dist/AntExample.war
+  discard-paths: yes
