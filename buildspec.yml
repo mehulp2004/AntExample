@@ -20,5 +20,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - dist/AntExample.war
+    - dist/AntExample.zip
   discard-paths: yes
